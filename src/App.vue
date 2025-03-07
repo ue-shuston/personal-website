@@ -1,14 +1,7 @@
+<script setup>
+    const value = 'World 2';
+</script>
+
 <template>
     <div>Hello {{ value }}</div>
 </template>
-
-<script>
-    export default {
-        name: "App",
-        data() {
-            return {
-                value: "World"
-            };
-        }
-    };
-</script>
