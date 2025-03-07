@@ -1,31 +1,35 @@
-# Vue Basic
+# personal-website
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [Vue.js](https://vuejs.org/) apps in minutes. Use this repo with the [Vue quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=vue) to build and customize a new static site.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Project setup
+## Recommended IDE Setup
 
-```bash
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile and Hot-Reload for Development
 
-```bash
-npm run serve
+```sh
+npm run dev
 ```
 
-### Compiles and minifies for production
+### Compile and Minify for Production
 
-```bash
+```sh
 npm run build
 ```
 
-### Lints and fixes files
+### Lint with [ESLint](https://eslint.org/)
 
-```bash
+```sh
 npm run lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
