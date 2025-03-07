@@ -31,7 +31,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "dist" # Built app content directory - optional
           
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -41,10 +41,10 @@ jobs:
       - run: npm run build --if-present
   
       # Store the dist folder
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
-          name: app-build
-          path: dist
+          name: app-build-${{ matrix.runs-on }}
+          path: file-${{ matrix.runs-on }}.txt
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,9 +52,11 @@ jobs:
     steps:
       # Get the dist folder
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: app-build
+          path: app-build
+          pattern: app-build-*
+          merge-multiple: true
       - run: ls dist
         ###### End of Repository/Build Configurations ######
 
