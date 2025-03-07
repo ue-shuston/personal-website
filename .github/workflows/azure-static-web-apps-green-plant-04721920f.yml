@@ -10,10 +10,10 @@ on:
       - main
 
 jobs:
-  build_and_deploy_job:
+  build:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+    name: Build Job
     steps:
       - uses: actions/checkout@v3
         with:
@@ -30,9 +30,9 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "dist" # Built app content directory - optional
+          
       - uses: actions/checkout@v3
-      
-      - name: Build Vue Application
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -45,14 +45,18 @@ jobs:
         with:
           name: app-build
           path: dist
-          
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
       # Get the dist folder
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
           name: app-build
       - run: ls dist
-      ###### End of Repository/Build Configurations ######
+        ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
