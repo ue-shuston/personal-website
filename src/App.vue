@@ -1,15 +1,10 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="Hello!" />
-    </div>
-  </header>
-
+  <h1>Hello App!</h1>
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav>
   <main>
-
+    <RouterView />
   </main>
 </template>
