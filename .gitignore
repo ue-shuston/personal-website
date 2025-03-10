@@ -1,29 +1,29 @@
 # Logs
-logs
-*.log
-npm-debug.log*
+lerna-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
+npm-debug.log*
+*.log
+logs
 
 node_modules
 .DS_Store
-dist
 dist-ssr
 coverage
 *.local
+dist
 
-/cypress/videos/
 /cypress/screenshots/
+/cypress/videos/
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
+*.njsproj
+.vscode/*
+*.ntvs*
 .idea
 *.suo
-*.ntvs*
-*.njsproj
 *.sln
 *.sw?
 
