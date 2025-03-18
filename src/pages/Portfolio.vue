@@ -1,3 +1,3 @@
 <template>
-  About
+  Portfolio
 </template>
