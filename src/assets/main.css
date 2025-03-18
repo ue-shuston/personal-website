@@ -1,22 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 * {
+  @apply antialiased;
+  @apply font-normal;
+  @apply text-base;
   @apply m-0;
   @apply p-0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.navigation-header {
+  @apply bg-black;
+}
+
+nav {
+  @apply max-w-6xl;
+  @apply mx-auto;
+}
+
+nav a {
+  @apply text-white;
+  @apply items-center;
+  @apply rounded-t-lg;
+  @apply no-underline;
+  @apply inline-flex;
+  @apply h-10;
+  @apply px-4;
+}
+
+nav a:hover {
+  @apply scale-115;
+}
+
+nav a.router-link-active {
+  @apply hover:text-blue-600;
+  @apply text-black;
+  @apply bg-white;
+}
+
+a {
+  @apply hover:text-blue-600;
+  @apply underline;
+}
+
+a,
+a svg {
+  @apply duration-150;
+  @apply ease-in-out;
+  @apply transition;
+  @apply delay-5;
+}
+
+main {
+  @apply h-[calc(100vh-152px)];
+  @apply max-w-6xl;
+  @apply mx-auto;
+  @apply p-4;
+}
+
+h1 {
+  @apply font-black;
+  @apply text-3xl;
+  @apply pt-1;
+  @apply pb-2;
+}
+
+h2 {
+  @apply font-black;
+  @apply text-2xl;
+  @apply py-0.75;
+  @apply pb-1.5;
+}
+
+h3 {
+  @apply font-black;
+  @apply text-xl;
+  @apply py-0.5;
+  @apply pb-1;
+}
+
+h4 {
+  @apply font-black;
+  @apply text-lg;
+  @apply py-0.25;
+  @apply pb-0.5;
+}
+
+footer {
+  @apply text-center;
+  @apply mb-4;
 }
 
 footer div.socials {
-  @apply gap-10;
-  @apply flex;
+  @apply justify-center;
 }
 
 footer div.socials a svg {
   @apply hover:scale-130;
   @apply cursor-pointer;
   @apply inline-block;
-  @apply duration-150;
-  @apply ease-in-out;
-  @apply transition;
-  @apply delay-25;
   @apply size-8;
+  @apply m-5;
 }
