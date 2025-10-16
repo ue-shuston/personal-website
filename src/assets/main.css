@@ -10,11 +10,16 @@
   font-family: "Roboto Mono", monospace;
 }
 
+body {
+  @apply min-w-[478px];
+}
+
 .navigation-header {
   @apply bg-black;
 }
 
-nav {
+nav,
+main {
   @apply max-w-6xl;
   @apply mx-auto;
 }
@@ -30,17 +35,20 @@ nav a {
 }
 
 nav a:hover {
-  @apply scale-115;
+  @apply scale-110;
 }
 
 nav a.router-link-active {
-  @apply hover:text-blue-600;
   @apply text-black;
   @apply bg-white;
 }
 
+nav a.router-link-active,
 a {
   @apply hover:text-blue-600;
+}
+
+a {
   @apply underline;
 }
 
@@ -53,53 +61,61 @@ a svg {
 }
 
 main {
-  @apply h-[calc(100vh-152px)];
-  @apply max-w-6xl;
-  @apply mx-auto;
+  @apply min-h-[calc(100vh-156px)];
   @apply p-4;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
   @apply font-black;
+}
+
+h1 {
   @apply text-3xl;
   @apply pt-1;
   @apply pb-2;
 }
 
 h2 {
-  @apply font-black;
   @apply text-2xl;
   @apply py-0.75;
   @apply pb-1.5;
 }
 
 h3 {
-  @apply font-black;
   @apply text-xl;
   @apply py-0.5;
   @apply pb-1;
 }
 
 h4 {
-  @apply font-black;
   @apply text-lg;
   @apply py-0.25;
   @apply pb-0.5;
 }
 
+footer,
+footer div.socials {
+  @apply my-5;
+}
+
 footer {
   @apply text-center;
-  @apply mb-4;
 }
 
 footer div.socials {
   @apply justify-center;
 }
 
+footer div.socials a {
+  @apply m-5;
+}
+
 footer div.socials a svg {
-  @apply hover:scale-130;
+  @apply hover:scale-125;
   @apply cursor-pointer;
   @apply inline-block;
   @apply size-8;
-  @apply m-5;
 }
