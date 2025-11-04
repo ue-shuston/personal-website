@@ -2,120 +2,120 @@
 @import "tailwindcss";
 
 * {
-  @apply antialiased;
-  @apply font-normal;
-  @apply text-base;
-  @apply m-0;
-  @apply p-0;
-  font-family: "Roboto Mono", monospace;
+    @apply antialiased;
+    @apply font-normal;
+    @apply text-base;
+    @apply m-0;
+    @apply p-0;
+    font-family: "Roboto Mono", monospace;
 }
 
 body {
-  @apply min-w-[478px];
+    @apply min-w-[478px];
 }
 
 .navigation-header {
-  @apply bg-black;
+    @apply bg-black;
 }
 
 nav,
 main {
-  @apply max-w-6xl;
-  @apply mx-auto;
+    @apply max-w-6xl;
+    @apply mx-auto;
 }
 
 nav a {
-  @apply text-white;
-  @apply items-center;
-  @apply rounded-t-lg;
-  @apply no-underline;
-  @apply inline-flex;
-  @apply h-10;
-  @apply px-4;
+    @apply text-white;
+    @apply items-center;
+    @apply rounded-t-lg;
+    @apply no-underline;
+    @apply inline-flex;
+    @apply h-10;
+    @apply px-4;
 }
 
 nav a:hover {
-  @apply scale-110;
+    @apply scale-110;
 }
 
 nav a.router-link-active {
-  @apply text-black;
-  @apply bg-white;
+    @apply text-black;
+    @apply bg-white;
 }
 
 nav a.router-link-active,
 a {
-  @apply hover:text-blue-600;
+    @apply hover:text-blue-600;
 }
 
 a {
-  @apply underline;
+    @apply underline;
 }
 
 a,
 a svg {
-  @apply duration-150;
-  @apply ease-in-out;
-  @apply transition;
-  @apply delay-5;
+    @apply duration-150;
+    @apply ease-in-out;
+    @apply transition;
+    @apply delay-5;
 }
 
 main {
-  @apply min-h-[calc(100vh-156px)];
-  @apply p-4;
+    @apply min-h-[calc(100vh-156px)];
+    @apply p-4;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  @apply font-black;
+    @apply font-black;
 }
 
 h1 {
-  @apply text-3xl;
-  @apply pt-1;
-  @apply pb-2;
+    @apply text-3xl;
+    @apply pt-1;
+    @apply pb-2;
 }
 
 h2 {
-  @apply text-2xl;
-  @apply py-0.75;
-  @apply pb-1.5;
+    @apply text-2xl;
+    @apply py-0.75;
+    @apply pb-1.5;
 }
 
 h3 {
-  @apply text-xl;
-  @apply py-0.5;
-  @apply pb-1;
+    @apply text-xl;
+    @apply py-0.5;
+    @apply pb-1;
 }
 
 h4 {
-  @apply text-lg;
-  @apply py-0.25;
-  @apply pb-0.5;
+    @apply text-lg;
+    @apply py-0.25;
+    @apply pb-0.5;
 }
 
 footer,
 footer div.socials {
-  @apply my-5;
+    @apply my-5;
 }
 
 footer {
-  @apply text-center;
+    @apply text-center;
 }
 
 footer div.socials {
-  @apply justify-center;
+    @apply justify-center;
 }
 
 footer div.socials a {
-  @apply m-5;
+    @apply m-5;
 }
 
 footer div.socials a svg {
-  @apply hover:scale-125;
-  @apply cursor-pointer;
-  @apply inline-block;
-  @apply size-8;
+    @apply hover:scale-125;
+    @apply cursor-pointer;
+    @apply inline-block;
+    @apply size-8;
 }
